@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context="com.example.myapplication.MainActivity"
+    android:background="#0147DA">
+
+
+    <!--<Button
+        android:id="@+id/saveimage"
+        android:layout_width="83dp"
+        android:layout_height="193dp"
+        android:text="Save Image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" /> -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:orientation="vertical">
+
+        <RelativeLayout
+
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#50AEB1">
+
+            <Button
+                android:id="@+id/viewmore2"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="400dp"
+                android:layout_marginEnd="73dp"
+                android:background="#0147DA"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="load"
+                android:textSize="7dp"
+                app:backgroundTint="#0147DA"
+                app:icon="@drawable/load"
+                app:iconSize="20dp" />
+
+            <Button
+                android:id="@+id/paintViewMore"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="400dp"
+                android:layout_marginEnd="215dp"
+                android:background="#0147DA"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="color"
+                android:textSize="7dp"
+                app:backgroundTint="#0147DA"
+                app:icon="@drawable/brush"
+                app:iconSize="20dp" />
+
+            <Button
+                android:id="@+id/undo"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="400dp"
+                android:layout_marginEnd="143dp"
+                android:background="#0147DA"
+                android:gravity="center"
+                android:onClick="undoLastDrawing"
+                android:padding="5dp"
+                android:text="undo"
+                android:textSize="7dp"
+                app:backgroundTint="#0147DA"
+                app:icon="@drawable/undovutton"
+                app:iconSize="20dp" />
+
+            <Button
+                android:id="@+id/viewmore1"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="400dp"
+                android:layout_marginEnd="5dp"
+                android:background="#0147DA"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="save"
+                android:textSize="7dp"
+                app:backgroundTint="#0147DA"
+                app:icon="@drawable/save"
+                app:iconSize="20dp" />
+
+            <Button
+                android:id="@+id/viewmore"
+                android:layout_width="71dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="400dp"
+                android:layout_marginEnd="286dp"
+                android:background="#0147DA"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="add"
+                android:textSize="7dp"
+                app:backgroundTint="#0147DA"
+                app:icon="@drawable/add"
+                app:iconSize="20dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="356dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/expandable"
+                android:layout_width="309dp"
+                android:layout_height="match_parent"
+                android:layout_above="@id/frame_layout"
+                android:layout_weight="1"
+                android:animateLayoutChanges="true"
+                android:background="#50AEB1"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <Button
+                    android:id="@+id/click1"
+                    android:layout_width="80dp"
+                    android:layout_height="59dp"
+                    android:onClick="onClick"
+                    android:text="Pin"
+                    android:textSize="14sp"
+                    app:backgroundTint="#0147DA" />
+
+                <Button
+                    android:id="@+id/createPDFbutton"
+                    android:layout_width="80dp"
+                    android:layout_height="59dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:onClick="onClick"
+                    android:text="PDF"
+                    android:textSize="14sp"
+                    app:backgroundTint="#0147DA" />
+
+                <Button
+                    android:id="@+id/drawStraightLine"
+                    android:layout_width="80dp"
+                    android:layout_height="59dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="102dp"
+                    android:onClick="onClick"
+                    android:text="LINE"
+                    android:textSize="14sp"
+                    app:backgroundTint="#0147DA" />
+
+                <Button
+                    android:id="@+id/drawText"
+                    android:layout_width="80dp"
+                    android:layout_height="59dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="190dp"
+                    android:onClick="onClick"
+                    android:text="TEXT"
+                    android:textSize="14sp"
+                    app:backgroundTint="#0147DA" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/expandable1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:animateLayoutChanges="true"
+                android:background="#50AEB1"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/bluePaint"
+                    android:layout_width="30dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="28dp"
+                    android:background="@drawable/bluebuttonround"
+                    android:backgroundTint="#0000FF"
+                    android:onClick="blueColour"
+                    android:textSize="18sp"
+                    app:backgroundTint="#0000FF" />
+
+                <Button
+                    android:id="@+id/redPaint"
+                    android:layout_width="30dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="243dp"
+                    android:layout_marginEnd="83dp"
+                    android:background="@drawable/bluebuttonround"
+                    android:onClick="redColour"
+                    android:textSize="18sp"
+                    app:backgroundTint="#E32636" />
+
+                <Button
+                    android:id="@+id/blackPaint"
+                    android:layout_width="30dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="190dp"
+                    android:layout_marginEnd="136dp"
+                    android:background="@drawable/bluebuttonround"
+                    android:onClick="blackColour"
+                    android:textSize="18sp"
+                    app:backgroundTint="#000000" />
+
+                <Button
+                    android:id="@+id/greenPaint"
+                    android:layout_width="30dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="129dp"
+                    android:layout_marginEnd="197dp"
+                    android:background="@drawable/bluebuttonround"
+                    android:onClick="greenColour"
+                    android:textSize="18sp"
+                    app:backgroundTint="#52d21a" />
+
+                <Button
+                    android:id="@+id/whitePaint"
+                    android:layout_width="30dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginEnd="256dp"
+                    android:background="@drawable/bluebuttonround"
+                    android:onClick="whiteColour"
+                    android:textSize="18sp"
+                    app:backgroundTint="#fff" />
+
+                <Button
+                    android:id="@+id/yellowPaint"
+                    android:layout_width="30dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginEnd="315dp"
+                    android:background="@drawable/bluebuttonround"
+                    android:onClick="yellowColour"
+                    android:textSize="18sp"
+                    app:backgroundTint="#f1c232" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/expandable2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:animateLayoutChanges="true"
+                android:background="#ffff"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frame_layout">
+
+        <ImageView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:background="@android:color/background_dark"
+            android:scaleType="centerInside" />
+
+
+    </FrameLayout>
+</LinearLayout>
